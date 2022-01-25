@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <label for="productName">Product Name:</label>
+        <input type="text" class="form-control my-3" id="productName">
+        <div class="alert alert-danger my-4" id="alertName">Enter Valid Name</div>
+        <label for="productCount">Product Count:</label>
+        <input type="number" class="form-control my-3" id="productCount">
+        <label for="productPrice">Product Price:</label>
+        <input type="number" class="form-control my-3" id="productPrice">
+        <div class="alert alert-danger my-4" id="alertPrice">Enter Valid Price</div>
+
+        <label for="productCategory">Product Category:</label>
+        <input type="text" class="form-control my-3" id="productCategory">
+        <div class="alert alert-danger my-4" id="alertCategory">Enter Valid Category</div>
+
+        <label for="productDesc">Product Desc:</label>
+        <textarea type="text" class="form-control my-3" id="productDesc"></textarea>
+        <div class="alert alert-danger my-4" id="alertDescription">Enter Valid Description</div>
+
+        <button class="btn btn-outline-dark" id="addOrUpdateBtn" onclick="addOrUpdate()">Add Product</button>
+        <button class="btn btn-outline-dark" onclick="clearForm()">Reset</button>
+        <input type="text" id="searchInput" placeholder="search....." class="form-control my-4 w-50 mx-auto"
+            onkeyup="searchProduct()">
+        <table class="table table-striped my-3">
+            <thead>
+                <th>index</th>
+                <th>productName</th>
+                <th>productCount</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDescription</th>
+                <th>IncreaseCount</th>
+                <th>DecreaseCount</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+ 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
